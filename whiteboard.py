@@ -1,33 +1,5 @@
-# Fizz Buzz
-# recreate it ourselves
-
-
-# matrix1 = [[1,2,3], [4,5,6], [7,8,9]]
-
-# def rotate(arr):
-#     new_array = []
-
-
-
-#     return new_array
-
-# rotate(matrix1)
-
-unArray = [-2, -3, 1, 8, 14, -6, 7]
-
-
-# def unsortedArr(arr):
-#     for i in range(len(arr)):
-#         if (arr[i] < 0 and abs(arr[i]) in arr):
-#             return [arr[i], abs(arr[i])]
-    
-#     return 'undefined'
-
-# # print(unsortedArr(unArray))
-# print(unsortedArr(sortArray))
-
-
-sortArray = [-11, -8, -3, 1, 2, 9, 23]
+# Problem 3: Write a function called sumZero which accepts a SORTED array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+sortArray = [-11, -8, -3, 1, 2, 5, 8, 23]
 
 def sumZero(arr):
     start = 0
@@ -43,4 +15,21 @@ def sumZero(arr):
             start += 1
     
 print(sumZero(sortArray))
+
+# Problem 4: Find the first pair where the sum is 0 given an UNSORTED array. No nested loops. Find a solution without sorting the array.
+# Solution: Accidentally solved this if the array is UNSORTED or SORTED. 
+unArray = [-2, -3, 1, 8, 14, -6, 7, 3]
+
+def unsortedArr(arr):
+    for i in range(len(arr)):
+        if (arr[i] < 0 and abs(arr[i]) in arr):
+            return [arr[i], abs(arr[i])]
+    
+    return 'undefined'
+
+# works regardless of unsorted or sorted array
+print(unsortedArr(unArray))
+print(unsortedArr(sortArray))
+
+
 
